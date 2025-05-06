@@ -1,0 +1,12 @@
+[Unit]
+Description=Refresh Pacman Mirrorlist at Boot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStartPre=/bin/sleep 10
+ExecStart=/usr/local/bin/refresh-mirrors.sh
+
+[Install]
+WantedBy=multi-user.target
