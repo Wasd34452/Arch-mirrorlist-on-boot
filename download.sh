@@ -10,7 +10,7 @@ SERVICE_PATH="/etc/systemd/system/refresh-mirrors.service"
 sudo pacman -S --noconfirm wget reflector
 
 # Download and set up script
-wget $WGET_URL -O $SCRIPT_PATH
+sudo wget $WGET_URL -O $SCRIPT_PATH
 sudo chmod +x $SCRIPT_PATH
 
 # Download service file
